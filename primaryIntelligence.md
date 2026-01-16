@@ -1,6 +1,6 @@
 <!-- TODO: Check for entry points -->
 
-# Intellegence (primary) #
+# Intelligence (primary) #
 
 > AV: `Intelligence` | AVC: `9`
 
@@ -68,3 +68,4 @@
 >
 > Derivation:<br>
 > `Skill Rate = floor(min(INT, 9) * 0.5 + 10)`
+
