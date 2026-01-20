@@ -1,0 +1,14 @@
+/*
+
+gr_*.txt on game start
+gl_*.txt on game load
+gs_*.txt on game save
+gx_*.txt on game exit
+xm_*.txt on exit to the main menu
+gn_*.txt on new game
+ln_*.txt on new game and game load
+
+*/
+
+scn
+

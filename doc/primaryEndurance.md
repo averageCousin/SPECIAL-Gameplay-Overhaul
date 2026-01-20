@@ -77,7 +77,7 @@
 > AV: `Health` | AVC: `16`<br>
 >
 > Derivation:<br>
-> `Health = 100 + (fAVDHealthEnduranceMult * fAVDHealthEnduranceOffset) + (END * fAVDHealthEnduranceMult) + ((LVL - 1)*fAVDHealthLevelMult)`
+> `Health = 100 + (fAVDHealthEnduranceMult * fAVDHealthEnduranceOffset) + (END * fAVDHealthEnduranceMult) + ((LVL - 1) * fAVDHealthLevelMult)`
 >
 > Settings:
 >
@@ -88,11 +88,11 @@
 
 ### Healing Rate (derived) ###
 
-> AV: `HealRate` | AVC: `16`<br>
+> AV: `HealRate` | AVC: `15`<br>
 >
 > Derivation:<br>
 > `HealRate = (0.066 * fAVDHealRateEndurance#Bonus) / 60`<br>
-> <sub>*\* Where `#` is the respective level of END</>
+> <sub>*\* Where `#` is the respective level of END*</sub>
 >
 > Settings:
 >
@@ -123,7 +123,7 @@
 > <sub>*0-100, treated as a percentage.*</sub><br>
 > <sub>*Capped at 85%: `fPlayerMaxResistance`.*</sub><br>
 >
-> AV: `RadResist` | AVC: `19`<br>
+> AV: `RadResist` | AVC: `20`<br>
 >
 > Derivation:<br>
 > `RadResist = (END - fAVDRadResistEnduranceOffset) * fAVDRadResistEnduranceMult`

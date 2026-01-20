@@ -2,7 +2,7 @@
 
 # Agility (primary) #
 
-> AV: `XX` | AVC: `##`
+> AV: `Agility` | AVC: `10`
 
 <details>
 
@@ -68,7 +68,7 @@
 > | Vanilla | 65.0 | 3.0 |
 > | JSU | 65.0 | 3.0 |
 >
-> <sub>*\*`fAVDActionPointsMult` <a href="https://geckwiki.com/index.php?title=FAVDActionPointsMult">GECK Wiki entry</a> is incorrect; 2.0 -> 3.0*</sub>
+> <sub>*\*`fAVDActionPointsMult` <a href="https://geckwiki.com/index.php?title=FAVDActionPointsMult">GECK Wiki entry</a> is incorrect; 2.0 $\rarr$ 3.0*</sub>
 
 ### Action Point Regeneration (derived) ###
 
@@ -107,7 +107,7 @@
 
 <!-- https://fallout.wiki/wiki/Agility_(Fallout:_New_Vegas)#Modifies -->
 
-> <sub>*\* </sub>
+> <sub></sub>
 >
 > AV: `null` | AVC: `null`<br>
 >
@@ -121,8 +121,8 @@
 > Derivation:<br>
 > `Reload Time = WeaponReloadTime / ((fPlayerWeaponReloadTimer + AGL * fAgilityReloadModifier) * ENTRYPOINT{Reload Speed})`
 >
-> <sub>*\* Where "Reload Time" and "WeaponReloadTime" are in seconds.*</sub>
-> <sub>*\* "WeaponReloadTime" derived from the attributes of the specific weapon in use*</sub>
+> <sub>*\* Where "Reload Time" and "WeaponReloadTime" are in seconds.*</sub><br>
+> <sub>*\* "WeaponReloadTime" derived from the attributes of the specific weapon in use*</sub><br>
 >
 > Settings:
 >

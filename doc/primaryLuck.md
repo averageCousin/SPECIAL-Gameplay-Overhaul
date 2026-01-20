@@ -20,8 +20,9 @@
 
 ### All Skills (derived) ###
 
-> AV: `null` | AVC: `null`
-> Derivation:
+> AV: `null` | AVC: `null`<br>
+>
+> Derivation:<br>
 > `\*SKILLNAME\* = fAVDSkill\*SKILLNAME\*Base + (\*PRIMARYSTAT\* * fAVDSkillPrimaryBonusMult) + ceil(LCK * fAVDSkillLuckBonusMult)`
 >
 > Settings:
@@ -33,9 +34,10 @@
 
 ### Critical Hit Chance (derived) ###
 
-> AV: `XX` | AVC: `##`
-> Derivation:
-> `CritChanceActorValue = fAVDCritLuckBase + (fAVDCritLuckMult * LCK)`
+> AV: `CritChance` | AVC: `14`<br>
+>
+> Derivation:<br>
+> `CritChance = fAVDCritLuckBase + (fAVDCritLuckMult * LCK)`
 >
 > Settings:
 >

@@ -1,6 +1,6 @@
 <!-- TODO: Check for entry points -->
 
-# Intellegence (primary) #
+# Intelligence (primary) #
 
 > AV: `Intelligence` | AVC: `9`
 
@@ -68,3 +68,20 @@
 >
 > Derivation:<br>
 > `Skill Rate = floor(min(INT, 9) * 0.5 + 10)`
+
+## Secondary Settings ##
+
+### Medicine Effects (derived) ###
+
+> AV: `null` | AVC: `null`<br>
+>
+> Derivation:<br>
+> `Potency = fMagicMedicineSkillBase + (fMagicMedicineSkillMult * (Medicine / 100))`<br>
+> <sub>*\* Where `Potency` is effect of the medical item; **not** an ActorValue.*</sub>
+>
+> Settings:
+>
+> | Config | `fMagicMedicineSkillBase` | `fMagicMedicineSkillMult` |
+> | - | - | - |
+> | Vanilla | 1.0 | 2.0 |
+> | JSU | 1.0 | 2.0 |

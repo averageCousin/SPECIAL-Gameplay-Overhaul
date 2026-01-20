@@ -55,4 +55,7 @@ Common Parameters
 
 fAVDTagSkillBonus
 fAVDSkillPrimaryBonusMult
-fAVDSkillLuckBonusMult -->
+fAVDSkillLuckBonusMult
+fPlayerMaxResistance
+ -->
+

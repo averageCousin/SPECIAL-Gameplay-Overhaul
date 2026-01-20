@@ -15,8 +15,8 @@
 * [`fAVDSkillMeleeWeaponsBase`](#melee-weapons-skill)
 * [`fAVDCarryWeightsBase`](#carry-weight-derived)
 * [`fAVDCarryWeightMult`](#carry-weight-derived)
-* [`fAVDMeleeDamageStrengthMult`](#melee-damage-derived)
-* [`fAVDMeleeDamageStrengthOffset`](#melee-damage-derived)
+<!-- * [`fAVDMeleeDamageStrengthMult`](#melee-damage-derived)
+* [`fAVDMeleeDamageStrengthOffset`](#melee-damage-derived) -->
 
 </details>
 
@@ -50,7 +50,7 @@
 > | Vanilla | 65.0 | 10.0 |
 > | JSU | 50.0 | 10.0 |
 
-### Melee Damage (derived) ###
+<!-- ### Melee Damage (derived) ###
 
 > AV: `MeleeDamage` | AVC: `17`<br>
 >
@@ -62,4 +62,4 @@
 > | Config | `fAVDMeleeDamageStrengthMult` | `fAVDMeleeDamageStrengthOffset` |
 > | - | - | - |
 > | Vanilla | 0.5 | 0.0 |
-> | JSU | 0.5 | 0.0 |
+> | JSU | 0.5 | 0.0 | -->

@@ -25,7 +25,10 @@
 > AV: `EnergyWeapons` | AVC: `34`<br>
 >
 > Derivation:<br>
-> `EnergyWeapons = fAVDSkillEnergyWeaponsBase + (PER * fAVDSkillPrimaryBonusMult) + ceil(LCK * fAVDSkillLuckBonusMult)`
+> $\text{EnergyWeapons}\ =$ <br>
+> $\ \ \text{fAVDSkillEnergyWeaponsBase}\ +$ <br>
+> $\ \ (\text{PER} * \text{fAVDSkillPrimaryBonusMult})\ +$ <br>
+> $\ \ \text{ceil}(\text{LCK} * \text{fAVDSkillLuckBonusMult})$ <br>
 >
 > Settings:
 >
@@ -39,7 +42,10 @@
 > AV: `Explosives` | AVC: `35`<br>
 >
 > Derivation:<br>
-> `Explosives = fAVDSkillExplosivesBase + (PER * fAVDSkillPrimaryBonusMult) + ceil(LCK * fAVDSkillLuckBonusMult)`
+> $\text{Explosives}\ =$ <br>
+> $\ \ \text{fAVDSkillExplosivesBase}\ +$ <br>
+> $\ \ (\text{PER} * \text{fAVDSkillPrimaryBonusMult})\ +$ <br>
+> $\ \ \text{ceil}(\text{LCK} * \text{fAVDSkillLuckBonusMult})$ <br>
 >
 > Settings:
 >
@@ -52,10 +58,13 @@
 
 > AV: `Lockpick` | AVC: `36`<br>
 >
-> Derivation:<br>
-> `Lockpick = fAVDSkillLockpickBase + (PER * fAVDSkillPrimaryBonusMult) + ceil(LCK * fAVDSkillLuckBonusMult)`
+> **Derivation:**<br>
+> `Lockpick`$\ =$ <br>
+> `fAVDSkillLockpickBase`$\ +$ <br>
+> $($`PER` $\cdotp$ `fAVDSkillPrimaryBonusMult`$)\ +$ <br>
+> $\text{ceil}($`LCK` $\cdotp$ `fAVDSkillLuckBonusMult`$)$ <br>
 >
-> Settings:
+> **Settings:**
 >
 > | Config | `fAVDSkillLockpickBase` |
 > | - | - |

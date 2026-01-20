@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+			"AGILITYMODIFIER",
+			"Deprevation",
+			"PRIMARYSTAT",
+			"SKILLNAME",
+			"Stewie"
+		],
+    "json.schemas": [
+      { "url": "./res/schema.jsonc" },
+      { "fileMatch": [ "schema.jsonc" ] }
+    ]
+  }
+}
