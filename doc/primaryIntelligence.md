@@ -1,3 +1,4 @@
+<!-- Author: @averageCousin -->
 <!-- TODO: Check for entry points -->
 
 # Intelligence (primary) #

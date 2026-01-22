@@ -1,3 +1,4 @@
+<!-- Author: @averageCousin -->
 <!-- TODO: Check for entry points -->
 
 # Strength (primary) #
@@ -47,7 +48,7 @@
 >
 > | Config | `fAVDCarryWeightsBase` | `fAVDCarryWeightMult` |
 > | - | - | - |
-> | Vanilla | 65.0 | 10.0 |
+> | Vanilla | 150.0 | 10.0 |
 > | JSU | 50.0 | 10.0 |
 
 <!-- ### Melee Damage (derived) ###

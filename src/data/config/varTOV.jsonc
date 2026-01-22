@@ -1,3 +1,4 @@
+// Author: @averageCousin
 {
   "$ref":"../../../res/schema.jsonc",
   "$schema": "../../../res/schema.jsonc",
@@ -20,348 +21,347 @@
   // },
 
 
-  // * [SKILL SETTINGS]
+  // TODO: [SKILL SETTINGS]
 
-  // * [DERIVED SETTINGS]
+  "[DERIVED SETTINGS]": {
 
-  "[Hit Points]": {
-    "actorValue": "Health",
-    "actorValueCode": 16,
-    "functionTerms": {
-      "varMultEND":  "fAVDHealthEnduranceMult",
-      "varOff": "fAVDHealthEnduranceOffset",
-      "varXp": "Endurance",
-      "varMultHP": "fAVDHealthLevelMult",
-      "varXl": "Player.GetLevel"
+    "[Hit Points]": {
+      "actorValue": "Health",
+      "actorValueCode": 16,
+      "functionTerms": {
+        "varMultEND":  "fAVDHealthEnduranceMult",
+        "varOff": "fAVDHealthEnduranceOffset",
+        "varXp": "Endurance",
+        "varMultHP": "fAVDHealthLevelMult",
+        "varXl": "Player.GetLevel"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDHealthEnduranceMult": 20.0,
+          "fAVDHealthEnduranceOffset": 0.0,
+          "fAVDHealthLevelMult": 5.0
+        },
+        "cfgJSawyerUltimate": {
+          "fAVDHealthEnduranceMult": 10.0,
+          "fAVDHealthEnduranceOffset": -5.0,
+          "fAVDHealthLevelMult": 5.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDHealthEnduranceMult": 0.0,
+          "fAVDHealthEnduranceOffset": 0.0,
+          "fAVDHealthLevelMult": 0.0
+        }
+      }
     },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDHealthEnduranceMult": 20.0,
-        "fAVDHealthEnduranceOffset": 0.0,
-        "fAVDHealthLevelMult": 5.0
+
+    "[Healing Rate]": {
+      "actorValue": "HealRate",
+      "actorValueCode": 15,
+      "functionTerms": {
+        "varBonus6":  "fAVDHealRateEndurance6Bonus",
+        "varBonus7":  "fAVDHealRateEndurance7Bonus",
+        "varBonus8":  "fAVDHealRateEndurance8Bonus",
+        "varBonus9":  "fAVDHealRateEndurance9Bonus",
+        "varBonus10": "fAVDHealRateEndurance10Bonus"
       },
-      "cfgJSawyerUltimate": {
-        "fAVDHealthEnduranceMult": 10.0,
-        "fAVDHealthEnduranceOffset": -5.0,
-        "fAVDHealthLevelMult": 5.0
+      "configurationSets": {
+        "cfgVanilla": {
+        "fAVDHealRateEndurance6Bonus": 5.0,
+        "fAVDHealRateEndurance7Bonus": 5.0,
+        "fAVDHealRateEndurance8Bonus": 5.0,
+        "fAVDHealRateEndurance9Bonus": 10.0,
+        "fAVDHealRateEndurance10Bonus": 10.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDHealRateEndurance6Bonus": 0.0,
+          "fAVDHealRateEndurance7Bonus": 0.0,
+          "fAVDHealRateEndurance8Bonus": 0.0,
+          "fAVDHealRateEndurance9Bonus": 0.0,
+          "fAVDHealRateEndurance10Bonus": 0.0
+        }
+      }
+    },
+
+    "[Action Points]": {
+      "actorValue": "ActionPoints",
+      "actorValueCode": 12,
+      "functionTerms": {
+        "varScale": "fAVDActionPointsScale",  // Custom
+        "varMult": "fAVDActionPointsMult",
+        "varX": "Agility",
+        "varBase": "fAVDActionPointsBase",
+        "varExp": "fAVDActionPointsExp",    // Custom
+        "varTrans": "fAVDActionPointsTrans"   // Custom
       },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDHealthEnduranceMult": 0.0,
-        "fAVDHealthEnduranceOffset": 0.0,
-        "fAVDHealthLevelMult": 0.0
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDActionPointsMult": 3.0,
+          "fAVDActionPointsBase": 65.0,
+          "fAVDActionPointsExp": 1
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDActionPointsScale": 0.0,
+          "fAVDActionPointsMult": 0.0,
+          "fAVDActionPointsBase": 0.0,
+          "fAVDActionPointsExp": 0.0,
+          "fAVDActionPointsTrans": 0.0
+        }
+      }
+    },
+
+    "[Action Point Regeneration]": {
+      "actorValue": null,
+      "actorValueCode": null,
+      "functionTerms": {
+        "varRate": "fActionPointsRestoreRate"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fActionPointsRestoreRate": 0.06
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fActionPointsRestoreRate": 0.0
+        }
+      }
+    },
+
+    "[Carry Weight]": {
+      "actorValue": "CarryWeight",
+      "actorValueCode": 17,
+      "functionTerms": {
+        "varMult": "fAVDCarryWeightMult",
+        "varX": "Strength",
+        "varBase": "fAVDCarryWeightsBase"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDCarryWeightMult": 10.0,
+          "fAVDCarryWeightsBase": 65.0
+        },
+        "cfgJSawyerUltimate": {
+          "fAVDCarryWeightMult": 10.0,
+          "fAVDCarryWeightsBase": 50.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDCarryWeightMult": 0.0,
+          "fAVDCarryWeightsBase": 0.0
+        }
+      }
+    },
+
+    "[Poison Resistance]": {
+      "actorValue": "PoisonResist",
+      "actorValueCode": 19,
+      "functionTerms": {
+        "varX": "Endurance",
+        "varOff": "fAVDPoisonResistEnduranceOffset",
+        "varMult": "fAVDPoisonResistEnduranceMult"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDPoisonResistEnduranceOffset": -1.0,
+          "fAVDPoisonResistEnduranceMult": 5.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+            "fAVDPoisonResistEnduranceOffset": 0.0,
+            "fAVDPoisonResistEnduranceMult": 0.0
+        }
+      }
+    },
+
+    "[Radiation Resistance]": {
+      "actorValue": "RadResist",
+      "actorValueCode": 20,
+      "functionTerms": {
+        "varX": "Endurance",
+        "varOff": "fAVDRadResistEnduranceOffset",
+        "varMult": "fAVDRadResistEnduranceMult"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDRadResistEnduranceOffset": -1.0,
+          "fAVDRadResistEnduranceMult": 2.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDRadResistEnduranceOffset": 0.0,
+          "fAVDRadResistEnduranceMult": 0.0
+        }
+      }
+    },
+
+    "[Fatigue]": {
+      "actorValue": "",
+      "actorValueCode": 0,
+      "functionTerms": {
+        "varMultEND": "fAVDFatigueEnduranceMult",
+        "varMultLVL": "fAVDFatigueLevelMult",
+        "varBase": "fAVDFatigueBase",
+        "varXe": "Endurance",
+        "varXl": "Player.GetLevel",
+        "varMin": "fMinFatigue"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDFatigueEnduranceMult": 20.0,
+          "fAVDFatigueLevelMult": 10.0,
+          "fAVDFatigueBase": 90.0,
+          "fMinFatigue": -30.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDFatigueEnduranceMult": 0.0,
+          "fAVDFatigueLevelMult": 0.0,
+          "fAVDFatigueBase": 0.0,
+          "fMinFatigue": 0.0
+        }
+      }
+    },
+
+    "[Food Effects]": {
+      "actorValue": null,
+      "actorValueCode": null,
+      "functionTerms": {
+        "varMult": "fMagicSurvivalSkillMult",
+        "varX": "Survival",
+        "varBase": "fMagicSurvivalSkillBase"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fMagicSurvivalSkillMult": 2.0,
+          "fMagicSurvivalSkillBase": 1.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fMagicSurvivalSkillMult": 0.0,
+          "fMagicSurvivalSkillBase": 0.0
+        }
+      }
+    },
+
+    "[Medicine Effects]": {
+      "actorValue": null,
+      "actorValueCode": null,
+      "functionTerms": {
+        "varMult": "fMagicMedicineSkillMult",
+        "varX": "Medicine",
+        "varBase": "fMagicMedicineSkillBase"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fMagicMedicineSkillMult": 2.0,
+          "fMagicMedicineSkillBase": 1.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fMagicMedicineSkillMult": 0.0,
+          "fMagicMedicineSkillBase": 0.0
+        }
+      }
+    },
+
+    "[Skill Point Rate]": {
+      "actorValue": "",
+      "actorValueCode": 0,
+      "functionTerms": {
+        "varX": "Intelligence"
+      },
+      "configurationSets": {
+        "cfgVanilla": {},
+        // TODO: Generate custom parameters
+        "cfgCustom": {}
+      }
+    },
+
+    "[Critical Hit Chance]": {
+      "actorValue": "CritChance",
+      "actorValueCode": 14,
+      "functionTerms": {
+        "varMult": "fAVDCritLuckMult",
+        "varX": "Luck",
+        "varBase": "fAVDCritLuckBase"
+      },
+      "configurationSets": {
+        "cfgVanilla": {
+          "fAVDCritLuckMult": 0.1,
+          "fAVDCritLuckBase": 0.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fAVDCritLuckMult": 0.0,
+          "fAVDCritLuckBase": 0.0
+        }
       }
     }
   },
 
-  "[Healing Rate]": {
-    "actorValue": "HealRate",
-    "actorValueCode": 15,
-    "functionTerms": {
-      "varBonus6":  "fAVDHealRateEndurance6Bonus",
-      "varBonus7":  "fAVDHealRateEndurance7Bonus",
-      "varBonus8":  "fAVDHealRateEndurance8Bonus",
-      "varBonus9":  "fAVDHealRateEndurance9Bonus",
-      "varBonus10": "fAVDHealRateEndurance10Bonus"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-      "fAVDHealRateEndurance6Bonus": 5.0,
-      "fAVDHealRateEndurance7Bonus": 5.0,
-      "fAVDHealRateEndurance8Bonus": 5.0,
-      "fAVDHealRateEndurance9Bonus": 10.0,
-      "fAVDHealRateEndurance10Bonus": 10.0
+  "[HARDCORE SETTINGS]": {
+    "[Dehydration]": {
+      "actorValue": "Dehydration",
+      "actorValueCode": 73,
+      "functionTerms": {
+        "varRate": "fHCDehydrationRate"
       },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDHealRateEndurance6Bonus": 0.0,
-        "fAVDHealRateEndurance7Bonus": 0.0,
-        "fAVDHealRateEndurance8Bonus": 0.0,
-        "fAVDHealRateEndurance9Bonus": 0.0,
-        "fAVDHealRateEndurance10Bonus": 0.0
+      "configurationSets": {
+        "cfgVanilla": {
+          "fHCDehydrationRate": 10.0
+        },
+        "cfgJSawyerUltimate": {
+          "fHCDehydrationRate": 5.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fHCDehydrationRate": 0.0
+        }
       }
-    }
-  },
-
-  "[Action Points]": {
-    "actorValue": "ActionPoints",
-    "actorValueCode": 12,
-    "functionTerms": {
-      "varScale": "fAVDActionPointsScale",  // Custom
-      "varMult": "fAVDActionPointsMult",
-      "varX": "Agility",
-      "varBase": "fAVDActionPointsBase",
-      "varExp": "fAVDActionPointsExp",    // Custom
-      "varTrans": "fAVDActionPointsTrans"   // Custom
     },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDActionPointsMult": 3.0,
-        "fAVDActionPointsBase": 65.0,
-        "fAVDActionPointsExp": 1
+
+    "[Hunger]": {
+      "actorValue": "Hunger",
+      "actorValueCode": 74,
+      "functionTerms": {
+        "varRate": "fHCStarvationRate"
       },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDActionPointsScale": 0.0,
-        "fAVDActionPointsMult": 0.0,
-        "fAVDActionPointsBase": 0.0,
-        "fAVDActionPointsExp": 0.0,
-        "fAVDActionPointsTrans": 0.0
+      "configurationSets": {
+        "cfgVanilla": {
+          "fHCStarvationRate": 25.0
+        },
+        "cfgJSawyerUltimate": {
+          "fHCStarvationRate": 12.5
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fHCStarvationRate": 0.0
+        }
       }
-    }
-  },
-
-  "[Action Point Regeneration]": {
-    "actorValue": null,
-    "actorValueCode": null,
-    "functionTerms": {
-      "varRate": "fActionPointsRestoreRate"
     },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fActionPointsRestoreRate": 0.06
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fActionPointsRestoreRate": 0.0
-      }
-    }
-  },
 
-  "[Carry Weight]": {
-    "actorValue": "CarryWeight",
-    "actorValueCode": 17,
-    "functionTerms": {
-      "varMult": "fAVDCarryWeightMult",
-      "varX": "Strength",
-      "varBase": "fAVDCarryWeightsBase"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDCarryWeightMult": 10.0,
-        "fAVDCarryWeightsBase": 65.0
+    "[Sleep Deprivation]": {
+      "actorValue": "SleepDeprevation",
+      "actorValueCode": 75,
+      "functionTerms": {
+        "varRate": "fHCSleepDeprivationRate"
       },
-      "cfgJSawyerUltimate": {
-        "fAVDCarryWeightMult": 10.0,
-        "fAVDCarryWeightsBase": 50.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDCarryWeightMult": 0.0,
-        "fAVDCarryWeightsBase": 0.0
-      }
-    }
-  },
-
-  "[Poison Resistance]": {
-    "actorValue": "PoisonResist",
-    "actorValueCode": 19,
-    "functionTerms": {
-      "varX": "Endurance",
-      "varOff": "fAVDPoisonResistEnduranceOffset",
-      "varMult": "fAVDPoisonResistEnduranceMult"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDPoisonResistEnduranceOffset": -1.0,
-        "fAVDPoisonResistEnduranceMult": 5.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-          "fAVDPoisonResistEnduranceOffset": 0.0,
-          "fAVDPoisonResistEnduranceMult": 0.0
-      }
-    }
-  },
-
-  "[Radiation Resistance]": {
-    "actorValue": "RadResist",
-    "actorValueCode": 20,
-    "functionTerms": {
-      "varX": "Endurance",
-      "varOff": "fAVDRadResistEnduranceOffset",
-      "varMult": "fAVDRadResistEnduranceMult"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDRadResistEnduranceOffset": -1.0,
-        "fAVDRadResistEnduranceMult": 2.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDRadResistEnduranceOffset": 0.0,
-        "fAVDRadResistEnduranceMult": 0.0
-      }
-    }
-  },
-
-  "[Fatigue]": {
-    "actorValue": "",
-    "actorValueCode": 0,
-    "functionTerms": {
-      "varMultEND": "fAVDFatigueEnduranceMult",
-      "varMultLVL": "fAVDFatigueLevelMult",
-      "varBase": "fAVDFatigueBase",
-      "varXe": "Endurance",
-      "varXl": "Player.GetLevel",
-      "varMin": "fMinFatigue"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDFatigueEnduranceMult": 20.0,
-        "fAVDFatigueLevelMult": 10.0,
-        "fAVDFatigueBase": 90.0,
-        "fMinFatigue": -30.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDFatigueEnduranceMult": 0.0,
-        "fAVDFatigueLevelMult": 0.0,
-        "fAVDFatigueBase": 0.0,
-        "fMinFatigue": 0.0
-      }
-    }
-  },
-
-  "[Food Effects]": {
-    "actorValue": null,
-    "actorValueCode": null,
-    "functionTerms": {
-      "varMult": "fMagicSurvivalSkillMult",
-      "varX": "Survival",
-      "varBase": "fMagicSurvivalSkillBase"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fMagicSurvivalSkillMult": 2.0,
-        "fMagicSurvivalSkillBase": 1.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fMagicSurvivalSkillMult": 0.0,
-        "fMagicSurvivalSkillBase": 0.0
-      }
-    }
-  },
-
-  "[Medicine Effects]": {
-    "actorValue": null,
-    "actorValueCode": null,
-    "functionTerms": {
-      "varMult": "fMagicMedicineSkillMult",
-      "varX": "Medicine",
-      "varBase": "fMagicMedicineSkillBase"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fMagicMedicineSkillMult": 2.0,
-        "fMagicMedicineSkillBase": 1.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fMagicMedicineSkillMult": 0.0,
-        "fMagicMedicineSkillBase": 0.0
-      }
-    }
-  },
-
-  "[Skill Point Rate]": {
-    "actorValue": "",
-    "actorValueCode": 0,
-    "functionTerms": {
-      "varX": "Intelligence"
-    },
-    "configurationSets": {
-      "cfgVanilla": {},
-      // TODO: Generate custom parameters
-      "cfgCustom": {}
-    }
-  },
-
-  "[Critical Hit Chance]": {
-    "actorValue": "CritChance",
-    "actorValueCode": 14,
-    "functionTerms": {
-      "varMult": "fAVDCritLuckMult",
-      "varX": "Luck",
-      "varBase": "fAVDCritLuckBase"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fAVDCritLuckMult": 0.1,
-        "fAVDCritLuckBase": 0.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fAVDCritLuckMult": 0.0,
-        "fAVDCritLuckBase": 0.0
-      }
-    }
-  },
-
-
-  // * [HARDCORE SETTINGS]
-
-  "[Dehydration]": {
-    "actorValue": "Dehydration",
-    "actorValueCode": 73,
-    "functionTerms": {
-      "varRate": "fHCDehydrationRate"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fHCDehydrationRate": 10.0
-      },
-      "cfgJSawyerUltimate": {
-        "fHCDehydrationRate": 5.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fHCDehydrationRate": 0.0
-      }
-    }
-  },
-
-  "[Hunger]": {
-    "actorValue": "Hunger",
-    "actorValueCode": 74,
-    "functionTerms": {
-      "varRate": "fHCStarvationRate"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fHCStarvationRate": 25.0
-      },
-      "cfgJSawyerUltimate": {
-        "fHCStarvationRate": 12.5
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fHCStarvationRate": 0.0
-      }
-    }
-  },
-
-  "[Sleep Deprivation]": {
-    "actorValue": "SleepDeprevation",
-    "actorValueCode": 75,
-    "functionTerms": {
-      "varRate": "fHCSleepDeprivationRate"
-    },
-    "configurationSets": {
-      "cfgVanilla": {
-        "fHCSleepDeprivationRate": 50.0
-      },
-      "cfgJSawyerUltimate": {
-        "fHCSleepDeprivationRate": 18.0
-      },
-      // TODO: Generate custom parameters
-      "cfgCustom": {
-        "fHCSleepDeprivationRate": 0.0
+      "configurationSets": {
+        "cfgVanilla": {
+          "fHCSleepDeprivationRate": 50.0
+        },
+        "cfgJSawyerUltimate": {
+          "fHCSleepDeprivationRate": 18.0
+        },
+        // TODO: Generate custom parameters
+        "cfgCustom": {
+          "fHCSleepDeprivationRate": 0.0
+        }
       }
     }
   }
-
 
   // * [TEMPLATE]
   // "[]": {

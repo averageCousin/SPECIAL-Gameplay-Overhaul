@@ -1,3 +1,5 @@
+<!-- Author: @averageCousin -->
+
 # Luck (primary) #
 
 > AV: `Luck` | AVC: `11`

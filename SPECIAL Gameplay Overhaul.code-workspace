@@ -15,6 +15,10 @@
     "json.schemas": [
       { "url": "./res/schema.jsonc" },
       { "fileMatch": [ "schema.jsonc" ] }
-    ]
+    ],
+    "[ini]": {
+      "rewrap.autoWrap.enabled": true,
+      "rewrap.wrappingColumn": 64
+    }
   }
 }

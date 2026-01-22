@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- Author: @averageCousin -->
 
 # S.P.E.C.I.A.L. Gameplay Overhaul #
 
