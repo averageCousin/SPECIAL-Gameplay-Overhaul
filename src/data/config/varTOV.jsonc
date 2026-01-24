@@ -1,4 +1,4 @@
-// Author: @averageCousin
+// author: @averageCousin
 {
   "$ref":"../../../res/schema.jsonc",
   "$schema": "../../../res/schema.jsonc",
@@ -12,7 +12,6 @@
   // "varTrans": "*Trans",      // = c
 
   // "slopeDegree": {
-  //   "type": "object",
   //   "Custom": 0,
   //   "Linear": 1,
   //   "Quadratic": 2,
@@ -20,8 +19,49 @@
   //   "Quartic": 4
   // },
 
+  "Difficulty": {
+    "growthRate": [ 1, 2, 3, 4 ],
+    "mode": [
+      "Vanilla",
+      "JSawyerUltimate",
+      "Custom"
+    ],
+    "target": {
+      "yTarget": 0.0,
+      "xTarget": 0.0
+    },
+    "offset": {
+      "initial": {
+        "Custom":      0.0,
+        "Normal":      0.0,
+        "Harder":     -5.0,
+        "Hard":      -10.0,
+        "Very Hard": -15.0
+      },
+      "final": {
+        "Custom":      0.0,
+        "Normal":      0.0,
+        "Harder":     -5.0,
+        "Hard":      -10.0,
+        "Very Hard": -15.0
+      }
+    }
+  },
 
-  // TODO: [SKILL SETTINGS]
+  "Function Format": {
+    "generalFunction":"y = n * (m * (x + b))^p + c",
+    "terms": {
+      "y": "evaluation",
+      "n": "yTarget",
+      "m": "1 / xTarget",
+      "x": "setting",
+      "b": "xOffset",
+      "p": "exponent",
+      "c": "yOffset"
+    }
+  },
+
+  // TODO: "[SKILL SETTINGS]": {}
 
   "[DERIVED SETTINGS]": {
 
@@ -54,7 +94,6 @@
         }
       }
     },
-
     "[Healing Rate]": {
       "actorValue": "HealRate",
       "actorValueCode": 15,
@@ -83,35 +122,26 @@
         }
       }
     },
-
     "[Action Points]": {
       "actorValue": "ActionPoints",
       "actorValueCode": 12,
       "functionTerms": {
-        "varScale": "fAVDActionPointsScale",  // Custom
         "varMult": "fAVDActionPointsMult",
         "varX": "Agility",
-        "varBase": "fAVDActionPointsBase",
-        "varExp": "fAVDActionPointsExp",    // Custom
-        "varTrans": "fAVDActionPointsTrans"   // Custom
+        "varBase": "fAVDActionPointsBase"
       },
       "configurationSets": {
         "cfgVanilla": {
           "fAVDActionPointsMult": 3.0,
-          "fAVDActionPointsBase": 65.0,
-          "fAVDActionPointsExp": 1
+          "fAVDActionPointsBase": 65.0
         },
         // TODO: Generate custom parameters
         "cfgCustom": {
-          "fAVDActionPointsScale": 0.0,
           "fAVDActionPointsMult": 0.0,
-          "fAVDActionPointsBase": 0.0,
-          "fAVDActionPointsExp": 0.0,
-          "fAVDActionPointsTrans": 0.0
+          "fAVDActionPointsBase": 0.0
         }
       }
     },
-
     "[Action Point Regeneration]": {
       "actorValue": null,
       "actorValueCode": null,
@@ -128,7 +158,6 @@
         }
       }
     },
-
     "[Carry Weight]": {
       "actorValue": "CarryWeight",
       "actorValueCode": 17,
@@ -151,9 +180,29 @@
           "fAVDCarryWeightMult": 0.0,
           "fAVDCarryWeightsBase": 0.0
         }
+      },
+      "customParameters": 4,
+      "coefficients": {
+        "Strength":  1.0,
+        "Endurance": 1.0,
+        "Agility":   1.0,
+        "Survival":  1.0
+      },
+      "intercepts": {
+        // "Custom": {
+        //   "initial": 0.0,
+        //   "final":   0.0
+        // },
+        "Vanilla": {
+          "initial": 150.0,
+          "final":   250.0
+        },
+        "JSawyerUltimate": {
+          "initial":  50.0,
+          "final":   150.0
+        }
       }
     },
-
     "[Poison Resistance]": {
       "actorValue": "PoisonResist",
       "actorValueCode": 19,
@@ -174,7 +223,6 @@
         }
       }
     },
-
     "[Radiation Resistance]": {
       "actorValue": "RadResist",
       "actorValueCode": 20,
@@ -195,7 +243,6 @@
         }
       }
     },
-
     "[Fatigue]": {
       "actorValue": "",
       "actorValueCode": 0,
@@ -223,7 +270,6 @@
         }
       }
     },
-
     "[Food Effects]": {
       "actorValue": null,
       "actorValueCode": null,
@@ -244,7 +290,6 @@
         }
       }
     },
-
     "[Medicine Effects]": {
       "actorValue": null,
       "actorValueCode": null,
@@ -265,7 +310,6 @@
         }
       }
     },
-
     "[Skill Point Rate]": {
       "actorValue": "",
       "actorValueCode": 0,
@@ -278,7 +322,6 @@
         "cfgCustom": {}
       }
     },
-
     "[Critical Hit Chance]": {
       "actorValue": "CritChance",
       "actorValueCode": 14,
@@ -321,7 +364,6 @@
         }
       }
     },
-
     "[Hunger]": {
       "actorValue": "Hunger",
       "actorValueCode": 74,
@@ -341,7 +383,6 @@
         }
       }
     },
-
     "[Sleep Deprivation]": {
       "actorValue": "SleepDeprevation",
       "actorValueCode": 75,
@@ -361,21 +402,52 @@
         }
       }
     }
+  },
+
+  "[MISCELLANEOUS]": {
+    "[Player Level]": {},
+    "[Level Cap]": {},
+    "[XP]": {}
   }
+
+
+
+
+
+
+
+
+
+
 
   // * [TEMPLATE]
   // "[]": {
   //   "actorValue": "",
   //   "actorValueCode": 0,
+  //   "customParameters": 0,
   //   "functionTerms": {},
   //   "configurationSets": {
-  //     "cfgVanilla": {},
-  //     // TODO: Generate custom parameters
-  //     "cfgCustom": {}
+  //     "cfgVanilla": {}
+  //   "coefficients": {
+  //     "Strength":  1.0,
+  //     "Endurance": 1.0,
+  //     "Agility":   1.0,
+  //     "Survival":  1.0
+  //   },
+  //   "intercepts": {
+  //     "Custom": {
+  //       "initial": 0.0,
+  //       "final":   0.0
+  //     },
+  //     "Vanilla": {
+  //       "initial": 0.0,
+  //       "final":   0.0
+  //     },
+  //     "JSawyerUltimate": {
+  //       "initial": 0.0,
+  //       "final":   0.0
+  //     }
   //   }
   // },
 
 }
-
-
-

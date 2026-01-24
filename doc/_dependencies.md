@@ -1,4 +1,4 @@
-<!-- Author: @averageCousin -->
+<!-- author: @averageCousin -->
 
 ## Mod Dependencies ##
 

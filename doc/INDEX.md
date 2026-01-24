@@ -1,9 +1,9 @@
 <!-- markdownlint-disable -->
-<!-- Author: @averageCousin -->
+<!-- author: @averageCousin -->
 
 # S.P.E.C.I.A.L. Gameplay Overhaul #
 
-#### Primary Stats ####
+### Primary Stats ###
 
 * [Strength](primaryStrength.md)
 * [Perception](primaryPerception.md)
@@ -12,6 +12,20 @@
 * [Intelligence](primaryIntelligence.md)
 * [Agility](primaryAgility.md)
 * [Luck](primaryLuck.md)
+
+<!-- TODO:
+ - JSU
+ - S6S Perks
+ -
+ -->
+### Included Patches ###
+
+| Mod Name | Abbreviation | Link |
+| - | - | - |
+| JSawyer Ultimate | JSU | [Nexus](https://www.nexusmods.com/newvegas/mods/61592) |
+| Sweet 6 Shooter Perks | - | [Nexus](https://www.nexusmods.com/newvegas/mods/73438) |
+
+
 
 <!-- <details>
 
@@ -33,10 +47,10 @@
 
 Common Parameters
 
-| Config  | `fAVDSkillPrimaryBonusMult` | `fPlayerMaxResistance` |     |     |     |     |     |     |     |     |
-| ------- | --------------------------- | ---------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Vanilla | 2.0                         | 85.0                   |     |     |     |     |     |     |     |     |
-| JSU     | 2.0                         | 85.0                   |     |     |     |     |     |     |     |     |
+| Config  | `fAVDSkillPrimaryBonusMult` | `fPlayerMaxResistance` |  |  |  |  |  |  |  |  |
+| ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Vanilla | 2.0 | 85.0 |  |     |     |     |     |     |     |     |
+| JSU     | 2.0 | 85.0 |     |     |     |     |     |     |     |     |
 
 
 

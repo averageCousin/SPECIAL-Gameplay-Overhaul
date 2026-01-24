@@ -1,4 +1,4 @@
-<!-- Author: @averageCousin -->
+<!-- author: @averageCousin -->
 <!-- TODO: Check for entry points -->
 
 # Charisma (primary) #

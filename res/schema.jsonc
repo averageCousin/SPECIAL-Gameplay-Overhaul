@@ -1,4 +1,4 @@
-// Author: @averageCousin
+// author: @averageCousin
 {
   "$id": "schemaSGO",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -7,51 +7,78 @@
   "items": {
     "type": "object",
     "uniqueItems": true,
-    "items": {
-      "pattern": "\\[.*\\]",
-      "type": "object",
-      "uniqueItems": true,
-      "enum": [
-        { "actorValue":      { "type": [ "string", "null" ] } },
-        { "actorValueCode":  { "type": [ "integer", "null" ] } },
-        // { "functionStandard": {
-        //   "type": "object",
-        //   "enum": [
-        //     "slopeGeneral",
-        //     "slopeInverse",
-        //     ""
-        //   ]
-        // } },
-        { "functionTerms": {
-          "type": "string",
-          "uniqueItems": true,
-          "pattern": "^var",
-          "enum": [
-            "^varN",
-            "^varM",
-            "^varX",
-            "^varB",
-            "^varP",
-            "^varC",
-            "^varRate",
-            "^varOff",
-            "^varBonus",
-            "^varMin",
-            "^varMax"
-          ]
-        } },
-        { "configurationSets" : {
-          "type": "object",
-          "uniqueItems": true,
-          "enum": [
-            { "cfgVanilla":          { "type": "object", "additionalProperties": { "type": "number" } } },
-            { "cfgJSawyerUltimate":  { "type": "object", "additionalProperties": { "type": "number" } } },
-            { "cfgSweet6Shooter":    { "type": "object", "additionalProperties": { "type": "number" } } },
-            { "cfgStewieA":          { "type": "object", "additionalProperties": { "type": "number" } } },
-            { "cfgCustom":           { "type": "object", "additionalProperties": { "type": "number" } } }
-          ]
-        } }
-      ]
+    "enum": [
+      "[PRIMARY STATS]",
+      "[SKILLS]",
+      "[DERIVED SETTINGS]",
+      "[HARDCORE SETTINGS]",
+      "[MISCELLANEOUS]"
+    ],
+    "properties": {
+      "[PRIMARY STATS]": {
+        "type": "object",
+        "enum": [
+          "[Strength]",
+          "[Perception]",
+          "[Endurance]",
+          "[Charisma]",
+          "[Intelligence]",
+          "[Agility]",
+          "[Luck]"
+        ]
+      },
+      "[SKILLS]": {
+        "type": "object",
+        "enum": [
+          "[Barter]",
+          "[Energy Weapons]",
+          "[Explosives]",
+          "[Small Guns]",
+          "[Big Guns]",
+          "[Lockpick]",
+          "[Medicine]",
+          "[Melee Weapons]",
+          "[Repair]",
+          "[Science]",
+          "[Sneak]",
+          "[Speech]",
+          "[Survival]",
+          "[Unarmed]"
+        ]
+      },
+      "[DERIVED SETTINGS]": {
+        "type": "object",
+        "enum": [
+          "[Hit Points]",
+          "[Healing Rate]",
+          "[Action Points]",
+          "[Action Point Regeneration]",
+          "[Carry Weight]",
+          "[Poison Resistance]",
+          "[Radiation Resistance]",
+          "[Fatigue]",
+          "[Food Effects]",
+          "[Medicine Effects]",
+          "[Skill Point Rate]",
+          "[Critical Hit Chance]"
+        ]
+      },
+      "[HARDCORE SETTINGS]": {
+        "type": "object",
+        "enum": [
+          "[Dehydration]",
+          "[Hunger]",
+          "[Sleep Deprivation]"
+        ]
+      },
+      "[MISCELLANEOUS]": {
+        "type": "object",
+        "enum": [
+          "[Player Level]",
+          "[Level Cap]",
+          "[XP]"
+        ]
+      }
     }
   }
 }
